@@ -68,11 +68,8 @@ class App extends Component {
   }
 
   scrollTo = () => {
-    const gallery = document.querySelector('.gallery');
-    const cardHeight = gallery.getBoundingClientRect().height;
-    window.scrollBy({
-      left: 0,
-      top: cardHeight * 4,
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
       behavior: 'smooth',
     });
   };
